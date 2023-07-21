@@ -13,7 +13,8 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
 
-  config.vm.provision "shell", path: "bash_prompt.sh"#, run: 'always'
+  # This line for configure the vagrant after creating the vm, We are executing a script here. "run: always" -> means it will execute everytime vagrant up
+  config.vm.provision "shell", path: "bash_prompt.sh" #, run: 'always'
 
   config.vm.box = "ubuntu/bionic64"
 
